@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Deem Creations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+ <nav>
+    <img src="images/logo.png" alt="Deem Creations">   
+    <ul>
+        <li><a href="index.html">Home</a></li>            
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Service</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#" class="btn-quote" id="openFormBtn">Get Quote</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Get In Touch <br>With Us</h2>
+        <p>
+            Have questions or want to start a project? We’d love to hear from you! 
+            Fill out the form or reach us through our contact details below.
+        </p>
+        <button id="getStartedBtn">Send Message</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/hero.png" alt="Contact Deem Creations">
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <div class="contact-container">
+        <!-- Left Side: Contact Info -->
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Digital Street, Lahore, Pakistan</p>
+            <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+            <p><i class="fas fa-envelope"></i> info@deemcreations.com</p>
+            <p><i class="fas fa-globe"></i> www.deemcreations.com</p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form">
+    <h3>Send Us a Message</h3>
+
+    <form id="contactForm">
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <label>Select Inquiry Type</label>
+        <select name="inquiry" required>
+            <option value="" disabled selected>-- Choose an option --</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Video Editing">Video Editing</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</div>
+</section>
+      
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>Deem Creations</h3>
+            <p>DeemCreations is a results-driven digital agency<br>
+               delivering high-quality web development, branding,<br>
+               and digital marketing solutions to help businesses <br>
+               grow in the modern digital world.</p>
+        </div>
+
+        <div>
+        <h4>Useful Links</h4>
+        <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Email: creationsdeem@gmail.com</p>
+            <p>Phone: +92 316 1733132</p>
+            <p>Phone: +92 315 5806310</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 DeemCreations. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("6OZj5kehLWwvSA787"); // your public key
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_0qeoz6n",
+        "template_mi1jb12", // better hai contact ke liye alag template bana lo
+        this
+    )
+    .then(function() {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    }, function(error) {
+        alert("Failed to send. Please try again.");
+        console.log(error);
+    });
+});
+</script>
+
+</body>
+
+<script src="scrolform.js"></script>
+
+</html>

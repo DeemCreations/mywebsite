@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<Header>
+<title>Deem Creations</title>  
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</Header>
+<body>
+<!-- Navigation -->
+ <nav>
+    <img src="images/logo.png" alt="Deem Creations">   
+    <ul>
+        <li><a href="index.html">Home</a></li>            
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Service</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#" class="btn-quote" id="openFormBtn">Get Quote</a></li>
+    </ul>
+</nav>
+
+<!-- Modal Container -->
+<div id="quoteModal" class="modal"></div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>About Us</h1>
+    </div>
+</section>
+
+<div class="scroll-text">
+    <div class="scroll-track">
+        <span>
+            🚀 DeemCreations • Web Development • Branding • Digital Marketing • Video Editing • Creative Solutions •
+        </span>
+        <span>
+            🚀 DeemCreations • Web Development • Branding • Digital Marketing • Video Editing • Creative Solutions •
+        </span>
+    </div>
+</div>
+
+
+
+<!-- INTRO SECTION -->
+<section class="about-section">
+    <div class="container">
+        <span class="small-title">ABOUT US</span>
+        <h2>Introduction To Best Digital Agency!</h2>
+        <p class="description">
+            We are a creative digital agency providing web development,
+            branding, marketing and modern digital solutions to grow your business.
+        </p>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">💰</div>
+                <h4>Best Price Guaranteed</h4>
+                <p>Affordable and premium quality services.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">⚙</div>
+                <h4>Finance Analysis</h4>
+                <p>Data-driven marketing strategies.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">👥</div>
+                <h4>Professional Team</h4>
+                <p>Experienced and skilled experts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IMAGE + VIDEO SECTION -->
+<section class="media-section">
+    <div class="container media-grid">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="team">
+
+        <div class="video-box">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="video">
+            <div class="play-btn">▶</div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<!-- TEAM SECTION -->
+<section class="team-section">
+    <div class="container">
+        <span class="small-title">OUR TEAM</span>
+        <h2>Team Members</h2>
+
+        <div class="team-grid">
+
+               
+            <div class="team-card">
+                <a href="nadeem.html">
+                <img src="images/nadeem.jpeg" alt="Team Member">
+                </a>
+                
+                <h4>Muhammad Nadeem</h4>
+                <p>CO founder & CEO</p>
+            </div>
+
+            <div class="team-card">
+                <a href="auriya.html">
+                <img src="images/auriya.jpg">
+                </a>
+                <h4>Muhammad Auriya Faiz</h4>
+                <p>Co-Founder <br> & <br> Chief Marketing Officer (CMO)</p>
+            </div>
+
+            <div class="team-card">
+                <a href="kaleem.html">
+                <img src="images/kaleem.jpg">
+                </a>
+                <h4>Muhammad Kaleem</h4>
+                <p>Creative Director</p>
+            </div>
+
+         
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>Deem Creations</h3>
+            <p>DeemCreations is a results-driven digital agency<br>
+               delivering high-quality web development, branding,<br>
+               and digital marketing solutions to help businesses <br>
+               grow in the modern digital world.</p>
+        </div>
+
+        <div>
+        <h4>Useful Links</h4>
+        <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Email: creationsdeem@gmail.com</p>
+            <p>Phone: +92 316 1733132</p>
+            <p>Phone: +92 315 5806310</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 DeemCreations. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("6OZj5kehLWwvSA787"); // Replace with your public key
+})();
+
+document.addEventListener("submit", function(e) {
+    if (e.target && e.target.id === "quoteForm") {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_0qeoz6n",     // Replace
+            "template_awr06ir",    // Replace
+            e.target
+        )
+        .then(function() {
+            alert("Quote request sent successfully!");
+            document.getElementById("quoteModal").style.display = "none";
+            e.target.reset();
+        }, function(error) {
+            alert("Failed to send. Please try again.");
+            console.log(error);
+        });
+    }
+});
+</script>
+
+
+</body>
+
+<script src="quote.js"></script>
+
+</html>

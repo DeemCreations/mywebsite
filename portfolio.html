@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Deem Creations | Portfolio</title>  
+<link rel="stylesheet" href="portfolio.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+ <nav>
+    <img src="images/logo.png" alt="Deem Creations">   
+    <ul>
+        <li><a href="index.html">Home</a></li>            
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Service</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#" class="btn-quote" id="openFormBtn">Get Quote</a></li>
+    </ul>
+</nav>
+
+<!-- Modal Container -->
+<div id="quoteModal" class="modal"></div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Our Creative Portfolio</h1>
+</section>
+
+<div class="scroll-text">
+    <div class="scroll-track">
+        <span>
+            🚀 DeemCreations • Web Development • Branding • Digital Marketing • Video Editing • Creative Solutions •
+        </span>
+        <span>
+            🚀 DeemCreations • Web Development • Branding • Digital Marketing • Video Editing • Creative Solutions •
+        </span>
+    </div>
+</div>
+
+<!-- FILTER BUTTONS -->
+<section class="portfolio-section">
+<div class="container">
+
+<div class="filter-buttons">
+    <button onclick="filterSelection('all')" class="active">All</button>
+    <button onclick="filterSelection('web')">Web</button>
+    <button onclick="filterSelection('design')">Design</button>
+    <button onclick="filterSelection('marketing')">Marketing</button>
+    <button onclick="filterSelection('video')">Video</button>
+</div>
+
+<div class="portfolio-grid">
+
+    <div class="portfolio-card web" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <div class="overlay">Business Website</div>
+    </div>
+
+    <div class="portfolio-card design" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+        <div class="overlay">Brand Identity</div>
+    </div>
+
+    <div class="portfolio-card marketing" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+        <div class="overlay">Digital Campaign</div>
+    </div>
+
+    <div class="portfolio-card video" onclick="openModal(this)">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+        <div class="overlay">Video Editing</div>
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- MODAL -->
+<div id="portfolioModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage">
+</div>
+
+<script>
+
+/* FILTER FUNCTION */
+function filterSelection(category) {
+    let cards = document.querySelectorAll(".portfolio-card");
+    let buttons = document.querySelectorAll(".filter-buttons button");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+
+    cards.forEach(card => {
+        if(category === "all"){
+            card.style.display = "block";
+        } else {
+            card.style.display = card.classList.contains(category) ? "block" : "none";
+        }
+    });
+}
+
+/* MODAL */
+function openModal(card){
+    let imgSrc = card.querySelector("img").src;
+    document.getElementById("modalImage").src = imgSrc;
+    document.getElementById("portfolioModal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("portfolioModal").style.display = "none";
+}
+
+</script>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>Deem Creations</h3>
+            <p>DeemCreations is a results-driven digital agency<br>
+               delivering high-quality web development, branding,<br>
+               and digital marketing solutions to help businesses <br>
+               grow in the modern digital world.</p>
+        </div>
+
+        <div>
+        <h4>Useful Links</h4>
+        <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Email: creationsdeem@gmail.com</p>
+            <p>Phone: +92 316 1733132</p>
+            <p>Phone: +92 315 5806310</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 DeemCreations. All Rights Reserved.
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("6OZj5kehLWwvSA787"); // Replace with your public key
+})();
+
+document.addEventListener("submit", function(e) {
+    if (e.target && e.target.id === "quoteForm") {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_0qeoz6n",     // Replace
+            "template_awr06ir",    // Replace
+            e.target
+        )
+        .then(function() {
+            alert("Quote request sent successfully!");
+            document.getElementById("quoteModal").style.display = "none";
+            e.target.reset();
+        }, function(error) {
+            alert("Failed to send. Please try again.");
+            console.log(error);
+        });
+    }
+});
+</script>
+
+
+
+
+
+</body>
+
+<script src="quote.js"></script>
+</html>

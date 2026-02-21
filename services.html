@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Deem Creations | Services</title>
+<link rel="stylesheet" href="services.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+ <nav>
+    <img src="images/logo.png" alt="Deem Creations">   
+    <ul>
+        <li><a href="index.html">Home</a></li>            
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Service</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#" class="btn-quote" id="openFormBtn">Get Quote</a></li>
+    </ul>
+</nav>
+
+<!-- Modal Container -->
+<div id="quoteModal" class="modal"></div>
+
+<!-- HERO -->
+<section class="services-hero">
+    <div class="hero-content">
+        <h1>Our Professional Services</h1>
+        <p>Innovative digital solutions designed to grow your business.</p>
+    </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="services-section">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>What We Offer</h2>
+            <p>We deliver high-quality digital services with modern technology and creativity.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Custom responsive websites optimized for performance and security.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Software Development</h3>
+                <p>Scalable and secure software solutions tailored to your needs.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-cart-shopping"></i>
+                <h3>E-Commerce</h3>
+                <p>High-converting online stores with secure payment integrations.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Graphic Designing</h3>
+                <p>Modern branding and creative visuals that make your business stand out.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Digital Marketing</h3>
+                <p>ROI-focused marketing strategies to grow your audience and sales.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-share-nodes"></i>
+                <h3>Social Media Management</h3>
+                <p>Professional content creation and management for your brand growth.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+    <div class="container why-grid">
+        <div>
+            <h2>Why Choose DeemCreations?</h2>
+            <p>We combine creativity, strategy, and technology to deliver outstanding results.</p>
+            <ul>
+                <li>✔ Professional & Experienced Team</li>
+                <li>✔ Affordable Pricing</li>
+                <li>✔ Modern Technologies</li>
+                <li>✔ 100% Client Satisfaction</li>
+            </ul>
+        </div>
+
+        <div class="why-image">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Ready To Start Your Project?</h2>
+    <a href="#" class="btn">Contact Us Today</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>Deem Creations</h3>
+            <p>DeemCreations is a results-driven digital agency<br>
+               delivering high-quality web development, branding,<br>
+               and digital marketing solutions to help businesses <br>
+               grow in the modern digital world.</p>
+        </div>
+
+        <div>
+        <h4>Useful Links</h4>
+        <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Email: creationsdeem@gmail.com</p>
+            <p>Phone: +92 316 1733132</p>
+            <p>Phone: +92 315 5806310</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 DeemCreations. All Rights Reserved.
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("6OZj5kehLWwvSA787"); // Replace with your public key
+})();
+
+document.addEventListener("submit", function(e) {
+    if (e.target && e.target.id === "quoteForm") {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_0qeoz6n",     // Replace
+            "template_awr06ir",    // Replace
+            e.target
+        )
+        .then(function() {
+            alert("Quote request sent successfully!");
+            document.getElementById("quoteModal").style.display = "none";
+            e.target.reset();
+        }, function(error) {
+            alert("Failed to send. Please try again.");
+            console.log(error);
+        });
+    }
+});
+</script>
+
+
+
+
+
+</body>
+
+<script src="quote.js"></script>
+
+</body>
+</html>
