@@ -189,7 +189,7 @@ nav ul li a:hover {
         rgba(32, 58, 67, 0.85),
         rgba(45, 106, 133, 0.85)
     ),
-    url('images/bg.jpg'); /* apni image ka path dalna */
+    url('bg.jpg'); /* apni image ka path dalna */
 
     background-size: cover;
     background-position: center;
@@ -650,3 +650,4 @@ body {
         transform: translateX(-50%);
     }
 }
+
