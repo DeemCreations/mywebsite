@@ -189,7 +189,7 @@ nav ul li a:hover {
         rgba(32, 58, 67, 0.85),
         rgba(45, 106, 133, 0.85)
     ),
-    url('bg.jpg'); /* apni image ka path dalna */
+     url('https://images.unsplash.com/photo-1548092372-0d1bd40894a3') center/cover;
 
     background-size: cover;
     background-position: center;
@@ -650,4 +650,5 @@ body {
         transform: translateX(-50%);
     }
 }
+
 
