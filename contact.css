@@ -168,7 +168,7 @@ footer {
 /* Footer Headings */
 footer h3,
 footer h4 {
-    color: goldenrod;
+    color: white;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -229,4 +229,5 @@ footer p {
         gap: 30px;
         text-align: center;
     }
+
 }
