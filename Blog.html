@@ -79,16 +79,84 @@
 </div>
 <h1>DeemCreations Blog</h1>
 
-<input type="text" id="searchInput" placeholder="Search blog...">
+<div class="blog-container">
 
-<div id="blogContainer"></div>
+    <h1>DeemCreations Blog</h1>
 
-<script src="js/blogdata.js"></script>
-<script src="js/blog.js"></script>
+    <!-- Search + Category -->
+    <div class="blog-filters">
+        <input type="text" id="searchInput" placeholder="Search blog...">
+        <select id="categorySelect">
+            <option value="all">All Categories</option>
+        </select>
+    </div>
+
+    <!-- Blog posts container -->
+    <div id="blogCards" class="blog-cards"></div>
+
+</div>
+
+<script src="js/blog-data.js"></script>
+<script>
+const blogCardsContainer = document.getElementById("blogCards");
+const searchInput = document.getElementById("searchInput");
+const categorySelect = document.getElementById("categorySelect");
+
+// Generate unique categories
+const categories = [...new Set(blogPosts.map(p => p.category))];
+categories.forEach(cat => {
+    let opt = document.createElement("option");
+    opt.value = cat;
+    opt.innerText = cat.charAt(0).toUpperCase() + cat.slice(1);
+    categorySelect.appendChild(opt);
+});
+
+// Function to render posts
+function renderPosts(posts) {
+    let html = '';
+    if(posts.length === 0){
+        html = "<p class='no-posts'>No posts found.</p>";
+    }
+    posts.forEach(post => {
+        html += `
+        <div class="blog-card">
+            <img src="${post.image}" alt="${post.title}">
+            <div class="blog-card-content">
+                <h2>${post.title}</h2>
+                <p class="blog-meta">By <span>${post.author}</span> | ${post.date} | ${post.category}</p>
+                <p>${post.description}</p>
+                <a href="post.html?id=${post.id}" class="read-more">Read More</a>
+                <div class="comments">💬 Comments placeholder</div>
+            </div>
+        </div>
+        `;
+    });
+    blogCardsContainer.innerHTML = html;
+}
+
+// Initial render
+renderPosts(blogPosts);
+
+// Search + Category filter
+function filterPosts() {
+    const searchVal = searchInput.value.toLowerCase();
+    const categoryVal = categorySelect.value;
+    const filtered = blogPosts.filter(post => {
+        const matchesTitle = post.title.toLowerCase().includes(searchVal);
+        const matchesCategory = categoryVal === "all" ? true : post.category === categoryVal;
+        return matchesTitle && matchesCategory;
+    });
+    renderPosts(filtered);
+}
+
+searchInput.addEventListener("keyup", filterPosts);
+categorySelect.addEventListener("change", filterPosts);
+</script>
 
 </body>
 
 </html>
+
 
 
 
