@@ -191,17 +191,17 @@ const caseStudies = {
         subtitle: 'Brand Identity & Packaging',
         year: '2026',
         industry: 'Restaurant & Coffee',
-        image: 'images/Coffee/logodetail.png',
+        image: 'logodetail.png',
         overview: 'Friends Coffee Shop is a modern coffee brand created to deliver a warm, premium, and community-focused café experience. The objective was to develop a memorable visual identity that reflects quality coffee, meaningful connections, and a welcoming atmosphere. The branding system includes a custom logo inspired by coffee beans and natural elements, a refined color palette, typography guidelines, packaging design, social media assets, brand applications, and digital touchpoints. Every visual element was designed to create consistency across online and offline customer experiences.The final identity positions Friends Coffee Shop as a contemporary and trustworthy brand that stands out in a competitive coffee market while maintaining a friendly and approachable personality.',
         challenge: 'The local coffee market is saturated with both chains and independent shops. Friends needed a brand that could capture attention while conveying their unique personality: a place where people genuinely connect over great coffee.',
         research: 'We conducted extensive research into the local coffee culture, surveyed target customers, and analyzed competitor positioning. Our findings revealed that customers in this segment value authenticity, community feel, and visual warmth over modern minimalism.',
         strategy: 'We positioned Friends as "Your Third Place"—a warm, inviting space between home and work where people feel they belong. The visual identity draws from this positioning with earthy tones, hand-crafted textures, and friendly typography.',
         identityDesign: 'The logo combines a custom wordmark with a subtle cup-and-steam motif that forms a heart shape—reinforcing the "friends" concept. The color palette centers on warm browns and cream tones with an accent amber that adds energy.',
         applications: [
-            { src: 'images/Coffee/logo.png', label: 'Logo Design' },
-            { src: 'images/Coffee/brand.png', label: 'Branding' },
-            { src: 'images/Coffee/instagrid.png', label: 'Grid System' },
-            { src: 'images/Coffee/shop.png', label: 'Interior Signage' }
+            { src: 'logo.png', label: 'Logo Design' },
+            { src: 'brand.png', label: 'Branding' },
+            { src: 'instagrid.png', label: 'Grid System' },
+            { src: 'shop.png', label: 'Interior Signage' }
         ],
         results: [
             { number: '40%', label: 'Increase in walk-ins' },
