@@ -1,0 +1,288 @@
+/* ============================================
+   DEEM CREATIONS — Custom Styles
+   ============================================ */
+
+/* Base Reset & Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: #002D72;
+    color: #FFFFFF;
+}
+
+/* Navigation States */
+#navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 45, 114, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+#navbar.scrolled .nav-logo-text {
+    color: #002D72;
+}
+
+#navbar.scrolled .nav-link {
+    color: rgba(30, 30, 30, 0.7);
+}
+
+#navbar.scrolled .nav-link:hover {
+    color: #002D72;
+}
+
+/* Reveal Animations */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-section {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for child items */
+.reveal-item:nth-child(1) { transition-delay: 0ms; }
+.reveal-item:nth-child(2) { transition-delay: 100ms; }
+.reveal-item:nth-child(3) { transition-delay: 200ms; }
+.reveal-item:nth-child(4) { transition-delay: 300ms; }
+.reveal-item:nth-child(5) { transition-delay: 400ms; }
+.reveal-item:nth-child(6) { transition-delay: 500ms; }
+
+/* FAQ Accordion */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item.active .faq-content {
+    max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active {
+    border-color: rgba(0, 45, 114, 0.2);
+}
+
+/* Portfolio Filter */
+.portfolio-item {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.portfolio-item.hidden-item {
+    opacity: 0;
+    transform: scale(0.95);
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Filter Button Active */
+.filter-btn.active {
+    background-color: #002D72 !important;
+    color: #FFFFFF !important;
+}
+
+/* Case Study Modal */
+#caseStudyModal {
+    z-index: 70;
+}
+
+#caseStudyModal.open {
+    transform: translateY(0);
+}
+
+/* Contact Form Focus States */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #002D72;
+    box-shadow: 0 0 0 3px rgba(0, 45, 114, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F7FA;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #002D72;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #001d4a;
+}
+
+/* Smooth image loading */
+img {
+    transition: opacity 0.3s ease;
+}
+
+/* Link hover underline animation */
+a {
+    text-decoration: none;
+}
+
+/* Process timeline responsive */
+@media (max-width: 1023px) {
+    .lg\:grid {
+        display: block;
+    }
+    
+    .lg\:text-right {
+        text-align: left;
+    }
+    
+    .lg\:pr-16,
+    .lg\:pl-16 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Form success message */
+#formMessage.success {
+    color: #002D72;
+}
+
+#formMessage.error {
+    color: #dc2626;
+}
+
+/* Mobile menu transition */
+#mobileMenu.open {
+    transform: translateX(0);
+}
+
+/* Case study content styling */
+.case-hero-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.case-section {
+    margin-bottom: 64px;
+}
+
+.case-section h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #002D72;
+    margin-bottom: 16px;
+}
+
+.case-section p {
+    color: rgba(30, 30, 30, 0.6);
+    line-height: 1.7;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.case-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.case-tag {
+    padding: 4px 12px;
+    background: #F5F7FA;
+    border-radius: 20px;
+    font-size: 0.8125rem;
+    color: rgba(30, 30, 30, 0.5);
+    font-weight: 500;
+}
+
+.case-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.case-result-item {
+    background: #F5F7FA;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.case-result-item .number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002D72;
+}
+
+.case-result-item .label {
+    font-size: 0.8125rem;
+    color: rgba(30, 30, 30, 0.5);
+    margin-top: 4px;
+}
+
+/* Nav active section highlighting */
+.nav-link.active-section {
+    color: #002D72 !important;
+}
+
+/* Hover lift for cards */
+.group:hover {
+    transform: translateY(-2px);
+}
+
+/* Ensure smooth scroll for anchor links */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .reveal-item,
+    .reveal-section {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

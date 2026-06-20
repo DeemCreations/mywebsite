@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deem Creations — Building Professional Brands</title>
+    <meta name="description" content="Deem Creations helps ambitious businesses create memorable visual identities that increase trust, recognition, and long-term growth.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#002D72',
+                        secondary: '#00AEEF',
+                        dark: '#1E1E1E',
+                        neutral: '#F5F7FA',
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-dark bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-heading font-bold text-sm">DC</span>
+                    </div>
+                    <span class="font-heading font-semibold text-lg nav-logo-text text-primary">Deem Creations</span>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a href="#about" class="nav-link text-sm font-medium text-dark/70 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#services" class="nav-link text-sm font-medium text-dark/70 hover:text-primary transition-colors duration-300">Services</a>
+                    <a href="#portfolio" class="nav-link text-sm font-medium text-dark/70 hover:text-primary transition-colors duration-300">Portfolio</a>
+                    <a href="#process" class="nav-link text-sm font-medium text-dark/70 hover:text-primary transition-colors duration-300">Process</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-dark/70 hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#portfolio" class="text-sm font-medium text-primary hover:text-primary/80 transition-colors">View Portfolio</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 transition-all duration-300">Start a Project</a>
+                </div>
+                <button id="menuBtn" class="md:hidden p-2 -mr-2" aria-label="Menu">
+                    <i data-lucide="menu" class="w-6 h-6 text-dark"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-500 ease-in-out">
+        <div class="flex items-center justify-between h-20 px-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-heading font-bold text-sm">DC</span>
+                </div>
+                <span class="font-heading font-semibold text-lg text-primary">Deem Creations</span>
+            </div>
+            <button id="closeMenu" class="p-2" aria-label="Close">
+                <i data-lucide="x" class="w-6 h-6 text-dark"></i>
+            </button>
+        </div>
+        <div class="flex flex-col px-6 pt-8 gap-1">
+            <a href="#about" class="mobile-link py-4 text-2xl font-heading font-semibold text-dark border-b border-neutral">About</a>
+            <a href="#services" class="mobile-link py-4 text-2xl font-heading font-semibold text-dark border-b border-neutral">Services</a>
+            <a href="#portfolio" class="mobile-link py-4 text-2xl font-heading font-semibold text-dark border-b border-neutral">Portfolio</a>
+            <a href="#process" class="mobile-link py-4 text-2xl font-heading font-semibold text-dark border-b border-neutral">Process</a>
+            <a href="#contact" class="mobile-link py-4 text-2xl font-heading font-semibold text-dark border-b border-neutral">Contact</a>
+        </div>
+        <div class="px-6 mt-8">
+            <a href="#contact" class="mobile-link block w-full text-center px-6 py-4 bg-primary text-white font-heading font-semibold rounded-lg">Start a Project</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-white via-neutral to-white"></div>
+        <div class="absolute top-20 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#002D72 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 w-full">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="max-w-2xl">
+                    <div class="reveal-item inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full mb-8">
+                        <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                        <span class="text-sm font-medium text-primary">Brand Identity & Creative Design Studio</span>
+                    </div>
+                    <h1 class="reveal-item font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.08] tracking-tight">
+                        Building Professional Brands That People Remember.
+                    </h1>
+                    <p class="reveal-item mt-8 text-lg md:text-xl text-dark/60 leading-relaxed max-w-xl">
+                        We help ambitious businesses create memorable visual identities that increase trust, recognition, and long-term growth.
+                    </p>
+                    <div class="reveal-item flex flex-col sm:flex-row gap-4 mt-10">
+                        <a href="#portfolio" class="px-8 py-4 bg-primary text-white font-heading font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 text-center group">
+                            View Portfolio
+                            <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border-2 border-primary/20 text-primary font-heading font-semibold rounded-lg hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 text-center">
+                            Start Your Project
+                        </a>
+                    </div>
+                    <div class="reveal-item flex items-center gap-8 mt-14 pt-8 border-t border-dark/10">
+                        <div>
+                            <div class="font-heading text-3xl font-bold text-primary">100%</div>
+                            <div class="text-sm text-dark/50 mt-1">Custom Designs</div>
+                        </div>
+                        <div class="w-px h-12 bg-dark/10"></div>
+                        <div>
+                            <div class="font-heading text-3xl font-bold text-primary">100%</div>
+                            <div class="text-sm text-dark/50 mt-1">Client Satisfaction</div>
+                        </div>
+                        <div class="w-px h-12 bg-dark/10"></div>
+                        <div>
+                            <div class="font-heading text-3xl font-bold text-primary">5+</div>
+                            <div class="text-sm text-dark/50 mt-1">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="relative">
+                        <div class="reveal-item absolute -top-4 -left-4 w-full h-full bg-primary/5 rounded-3xl"></div>
+                        <div class="reveal-item absolute top-8 -right-4 w-32 h-32 bg-secondary/10 rounded-2xl"></div>
+                        <div class="reveal-item absolute bottom-12 -left-8 w-24 h-24 bg-primary/10 rounded-2xl"></div>
+                        <div class="reveal-item relative rounded-3xl overflow-hidden aspect-[4/5] bg-neutral">
+                            <img src="images/hero.png" alt="Brand Identity Design" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+                        </div>
+                        <div class="reveal-item absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 max-w-[220px]">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
+                                    <i data-lucide="trending-up" class="w-5 h-5 text-secondary"></i>
+                                </div>
+                                <span class="font-heading font-semibold text-primary text-sm">Brand Growth</span>
+                            </div>
+                            <div class="flex items-end gap-1">
+                                <div class="w-3 h-4 bg-primary/20 rounded-sm"></div>
+                                <div class="w-3 h-6 bg-primary/30 rounded-sm"></div>
+                                <div class="w-3 h-8 bg-primary/40 rounded-sm"></div>
+                                <div class="w-3 h-10 bg-primary/60 rounded-sm"></div>
+                                <div class="w-3 h-14 bg-primary rounded-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="py-16 border-y border-dark/5 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <p class="text-center text-sm font-medium text-dark/40 uppercase tracking-widest mb-10">Trusted by businesses across industries</p>
+            <div class="flex flex-wrap items-center justify-center gap-x-14 gap-y-6">
+                <span class="font-heading text-xl font-bold text-dark/20">Friends Coffee</span>
+                <span class="font-heading text-xl font-bold text-dark/20">FreshFuel</span>
+                <span class="font-heading text-xl font-bold text-dark/20">Slice Republic</span>
+                <span class="font-heading text-xl font-bold text-dark/20">IdealZero</span>
+     
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-section">
+                    <span class="text-sm font-semibold text-secondary uppercase tracking-widest">About Us</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
+                        We don't just design logos.<br>We build brand systems.
+                    </h2>
+                    <p class="mt-6 text-lg text-dark/60 leading-relaxed">
+                        Deem Creations was founded with a clear mission: to help businesses move beyond generic design and into strategic brand identity. Based in Wah Cantt, Pakistan, we work with startups, restaurants, coffee shops, real estate companies, and growing businesses that want more than a logo—they want a brand that commands trust.
+                    </p>
+                    <p class="mt-4 text-lg text-dark/60 leading-relaxed">
+                        Every brand we create is rooted in strategy, research, and intentionality. We believe that great design isn't just beautiful—it's purposeful. That's why we build complete brand systems that work seamlessly across every touchpoint.
+                    </p>
+                </div>
+                <div class="reveal-section">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-neutral">
+                            <img src="images/about.png" alt="Design workspace" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-neutral mt-8">
+                            <img src="images/about2.png" alt="Brand strategy" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="mt-24 grid md:grid-cols-3 gap-8">
+                <div class="reveal-section group p-8 rounded-2xl border border-dark/5 hover:border-primary/10 transition-all duration-500 hover:bg-neutral/50">
+                    <div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                        <i data-lucide="target" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-primary">Strategy-First</h3>
+                    <p class="mt-3 text-dark/60 leading-relaxed">Every design decision is backed by research and aligned with your business objectives. No guesswork, only intentionality.</p>
+                </div>
+                <div class="reveal-section group p-8 rounded-2xl border border-dark/5 hover:border-primary/10 transition-all duration-500 hover:bg-neutral/50">
+                    <div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                        <i data-lucide="layers" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-primary">Complete Systems</h3>
+                    <p class="mt-3 text-dark/60 leading-relaxed">We deliver cohesive brand systems—not disconnected assets. Everything works together to build recognition and trust.</p>
+                </div>
+                <div class="reveal-section group p-8 rounded-2xl border border-dark/5 hover:border-primary/10 transition-all duration-500 hover:bg-neutral/50">
+                    <div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                        <i data-lucide="gem" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-primary">Premium Quality</h3>
+                    <p class="mt-3 text-dark/60 leading-relaxed">We limit the number of projects we take on so each one receives our full attention and uncompromising dedication to craft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 md:py-32 bg-neutral">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="reveal-section text-center max-w-3xl mx-auto">
+                <span class="text-sm font-semibold text-secondary uppercase tracking-widest">Services</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
+                    What We Build for Your Brand
+                </h2>
+                <p class="mt-6 text-lg text-dark/60 leading-relaxed">
+                    Every service is designed to work together as a unified brand system. No disconnected pieces—only cohesive, strategic identity.
+                </p>
+            </div>
+
+            <div class="mt-16 grid md:grid-cols-2 gap-6">
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="fingerprint" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">01</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Brand Identity Design</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Complete visual identity systems that define how your brand looks, feels, and communicates—across every platform and touchpoint.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Visual Identity</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Color Systems</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Typography</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Brand Assets</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="hexagon" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">02</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Logo Design</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Memorable, versatile logos designed to work perfectly across all applications—from digital screens to physical signage and packaging.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Primary Logo</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Variations</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Responsive</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="compass" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">03</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Brand Strategy</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Strategic foundations that guide every brand decision—positioning, messaging, audience definition, and competitive differentiation.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Positioning</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Messaging</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Audience</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="book-open" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">04</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Brand Guidelines</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Comprehensive brand manuals that ensure consistency—documenting every rule, usage, and standard for your brand's visual identity.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Usage Rules</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Standards</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Documentation</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="package" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">05</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Packaging Design</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Shelf-standing packaging that protects your product and strengthens your brand—from concept to production-ready files.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Product Packaging</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Print-Ready</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="share-2" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">06</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Social Media Branding</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Cohesive social media templates and assets that maintain your brand identity across all platforms—consistent, professional, recognizable.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Templates</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Assets</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Consistency</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="monitor" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">07</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Website UI Design</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Conversion-focused website interfaces that translate your brand identity into a seamless digital experience—designed to perform.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">UI Design</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Responsive</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Conversion</span>
+                    </div>
+                </div>
+                <div class="reveal-section group bg-white rounded-2xl p-10 hover:shadow-lg transition-all duration-500 border border-transparent hover:border-primary/10">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center">
+                            <i data-lucide="file-text" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="font-heading text-5xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors duration-300">08</span>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mt-6">Marketing Collateral</h3>
+                    <p class="mt-4 text-dark/60 leading-relaxed">Business cards, letterheads, brochures, and every physical and digital asset your brand needs to present itself professionally.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Business Cards</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Stationery</span>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/60 rounded-full">Brochures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="reveal-section flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+                <div>
+                    <span class="text-sm font-semibold text-secondary uppercase tracking-widest">Portfolio</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
+                        Selected Case Studies
+                    </h2>
+                    <p class="mt-4 text-lg text-dark/60 max-w-xl">Every project tells a story of transformation. See how we've helped businesses build brands that stand out.</p>
+                </div>
+                <div class="flex gap-2" id="filterBtns">
+                    <button class="filter-btn active px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 bg-primary text-white" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 bg-neutral text-dark/60 hover:bg-primary hover:text-white" data-filter="restaurant">Restaurant</button>
+                    <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 bg-neutral text-dark/60 hover:bg-primary hover:text-white" data-filter="real-estate">Real Estate</button>
+                    <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 bg-neutral text-dark/60 hover:bg-primary hover:text-white" data-filter="startup">Startup</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8" id="portfolioGrid">
+                <!-- Friends Coffee Shop -->
+                <div class="reveal-section portfolio-item group cursor-pointer" data-category="restaurant" onclick="openCaseStudy('friends-coffee')">
+                    <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral">
+                        <img src="images\Coffee\logo.png" alt="Friends Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-500 flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-3 bg-white rounded-lg font-heading font-semibold text-primary text-sm">View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-start justify-between">
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">Friends Coffee Shop</h3>
+                            <p class="text-dark/50 mt-1">Brand Identity & Packaging</p>
+                        </div>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/50 rounded-full">Restaurant</span>
+                    </div>
+                </div>
+
+                <!-- FreshFuel -->
+                <div class="reveal-section portfolio-item group cursor-pointer" data-category="startup" onclick="openCaseStudy('freshfuel')">
+                    <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral">
+                        <img src="images\freshfuel\logo.png" alt="FreshFuel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-500 flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-3 bg-white rounded-lg font-heading font-semibold text-primary text-sm">View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-start justify-between">
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">FreshFuel</h3>
+                            <p class="text-dark/50 mt-1">Brand Identity & Strategy</p>
+                        </div>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/50 rounded-full">Startup</span>
+                    </div>
+                </div>
+
+                <!-- Slice Republic -->
+                <div class="reveal-section portfolio-item group cursor-pointer" data-category="slice-republic" onclick="openCaseStudy('slice-republic')">
+                    <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral">
+                        <img src="images/slicerepublic/logo.png" alt="Slice Republic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-500 flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-3 bg-white rounded-lg font-heading font-semibold text-primary text-sm">View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-start justify-between">
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">Slice Republic</h3>
+                            <p class="text-dark/50 mt-1">Brand Identity & Guidelines</p>
+                        </div>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/50 rounded-full">Slice Republic</span>
+                    </div>
+                </div>
+
+                <!-- IdealZero -->
+                <div class="reveal-section portfolio-item group cursor-pointer" data-category="startup" onclick="openCaseStudy('idealzero')">
+                    <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral">
+                        <img src="images/idealzero/logo.png" alt="IdealZero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-500 flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-3 bg-white rounded-lg font-heading font-semibold text-primary text-sm">View Case Study →</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-start justify-between">
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">IdealZero</h3>
+                            <p class="text-dark/50 mt-1">Brand Identity & Website UI</p>
+                        </div>
+                        <span class="px-3 py-1 bg-neutral text-xs font-medium text-dark/50 rounded-full">Startup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Modal -->
+    <div id="caseStudyModal" class="fixed inset-0 z-[70] bg-white overflow-y-auto transform translate-y-full transition-transform duration-700 ease-in-out">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 py-8">
+            <div class="flex items-center justify-between mb-12">
+                <span class="font-heading text-sm font-semibold text-secondary uppercase tracking-widest">Case Study</span>
+                <button onclick="closeCaseStudy()" class="p-2 hover:bg-neutral rounded-lg transition-colors">
+                    <i data-lucide="x" class="w-6 h-6 text-dark"></i>
+                </button>
+            </div>
+            <div id="caseStudyContent"></div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 md:py-32 bg-primary">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="reveal-section text-center max-w-3xl mx-auto">
+                <span class="text-sm font-semibold text-secondary uppercase tracking-widest">Why Deem Creations</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
+                    Not Another Design Agency
+                </h2>
+                <p class="mt-6 text-lg text-white/60 leading-relaxed">
+                    We're a specialized brand identity studio. That focus means every project gets the depth of thinking and quality of execution it deserves.
+                </p>
+            </div>
+
+            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="reveal-section text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="focus" class="w-8 h-8 text-secondary"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white">Specialized Focus</h3>
+                    <p class="mt-3 text-white/50 leading-relaxed">We only do brand identity. That singular focus produces better results than agencies that try to do everything.</p>
+                </div>
+                <div class="reveal-section text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="search" class="w-8 h-8 text-secondary"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white">Research-Driven</h3>
+                    <p class="mt-3 text-white/50 leading-relaxed">We study your industry, competitors, and audience before designing anything. Strategy always comes first.</p>
+                </div>
+                <div class="reveal-section text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="puzzle" class="w-8 h-8 text-secondary"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white">Cohesive Systems</h3>
+                    <p class="mt-3 text-white/50 leading-relaxed">Every element works together. No disconnected assets—just one unified brand system that builds recognition.</p>
+                </div>
+                <div class="reveal-section text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="handshake" class="w-8 h-8 text-secondary"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white">Real Partnership</h3>
+                    <p class="mt-3 text-white/50 leading-relaxed">We work alongside you—not just for you. Your insights and vision are central to the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="reveal-section text-center max-w-3xl mx-auto">
+                <span class="text-sm font-semibold text-secondary uppercase tracking-widest">Our Process</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
+                    How We Build Your Brand
+                </h2>
+                <p class="mt-6 text-lg text-dark/60 leading-relaxed">
+                    A proven, structured process that transforms your vision into a strategic, cohesive brand identity.
+                </p>
+            </div>
+
+            <div class="mt-16 relative">
+                <!-- Timeline Line -->
+                <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-dark/10 -translate-x-1/2"></div>
+
+                <div class="space-y-12 lg:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="reveal-section lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="lg:text-right lg:pr-16">
+                            <span class="font-heading text-sm font-bold text-secondary">01</span>
+                            <h3 class="font-heading text-2xl font-bold text-primary mt-2">Discovery</h3>
+                            <p class="mt-3 text-dark/60 leading-relaxed">We begin by understanding your business inside and out—your goals, values, audience, and competitive landscape. This phase sets the foundation for every decision that follows.</p>
+                        </div>
+                        <div class="hidden lg:flex lg:pl-16 items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -ml-6 relative z-10">
+                                <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="reveal-section lg:grid lg:grid-cols-2 lg:gap-16 items-center mt-12 lg:mt-0">
+                        <div class="hidden lg:flex lg:justify-end items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -mr-6 relative z-10">
+                                <i data-lucide="search" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="lg:pl-16">
+                            <span class="font-heading text-sm font-bold text-secondary">02</span>
+                            <h3 class="font-heading text-2xl font-bold text-primary mt-2">Research</h3>
+                            <p class="mt-3 text-dark/60 leading-relaxed">We analyze your industry, study your competitors, and map your audience's expectations. This research ensures your brand identity is both distinctive and strategically positioned.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="reveal-section lg:grid lg:grid-cols-2 lg:gap-16 items-center mt-12 lg:mt-0">
+                        <div class="lg:text-right lg:pr-16">
+                            <span class="font-heading text-sm font-bold text-secondary">03</span>
+                            <h3 class="font-heading text-2xl font-bold text-primary mt-2">Strategy</h3>
+                            <p class="mt-3 text-dark/60 leading-relaxed">With research insights in hand, we develop your brand's strategic framework—positioning, messaging, and the visual direction that will differentiate you in your market.</p>
+                        </div>
+                        <div class="hidden lg:flex lg:pl-16 items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -ml-6 relative z-10">
+                                <i data-lucide="compass" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="reveal-section lg:grid lg:grid-cols-2 lg:gap-16 items-center mt-12 lg:mt-0">
+                        <div class="hidden lg:flex lg:justify-end items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -mr-6 relative z-10">
+                                <i data-lucide="pen-tool" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="lg:pl-16">
+                            <span class="font-heading text-sm font-bold text-secondary">04</span>
+                            <h3 class="font-heading text-2xl font-bold text-primary mt-2">Design</h3>
+                            <p class="mt-3 text-dark/60 leading-relaxed">We translate strategy into visual identity—crafting your logo, selecting your color palette, defining your typography, and creating every brand element with precision and purpose.</p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="reveal-section lg:grid lg:grid-cols-2 lg:gap-16 items-center mt-12 lg:mt-0">
+                        <div class="lg:text-right lg:pr-16">
+                            <span class="font-heading text-sm font-bold text-secondary">05</span>
+                            <h3 class="font-heading text-2xl font-bold text-primary mt-2">Refinement</h3>
+                            <p class="mt-3 text-dark/60 leading-relaxed">Every detail is reviewed, tested, and refined. We iterate with intention—ensuring the final brand system is flawless and ready for every application.</p>
+                        </div>
+                        <div class="hidden lg:flex lg:pl-16 items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -ml-6 relative z-10">
+                                <i data-lucide="sliders" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="reveal-section lg:grid lg:grid-cols-2 lg:gap-16 items-center mt-12 lg:mt-0">
+                        <div class="hidden lg:flex lg:justify-end items-center">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -mr-6 relative z-10">
+                                <i data-lucide="rocket" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="lg:pl-16">
+                            <span class="font-heading text-sm font-bold text-secondary">06</span>
+                            <h3 class="font-heading text-2xl font-bold text-primary mt-2">Launch</h3>
+                            <p class="mt-3 text-dark/60 leading-relaxed">We deliver your complete brand system—ready to deploy across all touchpoints. Plus, your brand guidelines document ensures consistency for years to come.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 md:py-32 bg-neutral">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="reveal-section text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-semibold text-secondary uppercase tracking-widest">Testimonials</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
+                    What Our Clients Say
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal-section bg-white rounded-2xl p-8 border border-dark/5">
+                    <div class="flex gap-1 mb-6">
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                    </div>
+                    <p class="text-dark/70 leading-relaxed">"Deem Creations didn't just design our logo—they gave us an identity that our customers instantly connect with. The brand system they built works beautifully across everything we do."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="font-heading font-bold text-primary text-sm">A</span>
+                        </div>
+                        <div>
+                            <div class="font-heading font-semibold text-primary text-sm">Ahmed Khan</div>
+                            <div class="text-dark/40 text-xs">Founder, FreshFuel</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-section bg-white rounded-2xl p-8 border border-dark/5">
+                    <div class="flex gap-1 mb-6">
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                    </div>
+                    <p class="text-dark/70 leading-relaxed">"The research and strategy behind our rebrand was impressive. They understood our market deeply and translated that understanding into a brand that feels both premium and approachable."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="font-heading font-bold text-primary text-sm">S</span>
+                        </div>
+                        <div>
+                            <div class="font-heading font-semibold text-primary text-sm">Sara Malik</div>
+                            <div class="text-dark/40 text-xs">Owner, Friends Coffee Shop</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-section bg-white rounded-2xl p-8 border border-dark/5">
+                    <div class="flex gap-1 mb-6">
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i>
+                    </div>
+                    <p class="text-dark/70 leading-relaxed">"Working with Deem Creations felt like having a true brand partner. They delivered a complete system—not just a logo—and the guidelines make it easy to keep everything consistent."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="font-heading font-bold text-primary text-sm">R</span>
+                        </div>
+                        <div>
+                            <div class="font-heading font-semibold text-primary text-sm">Rizwan Ali</div>
+                            <div class="text-dark/40 text-xs">Director, Slice Republic</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <div class="reveal-section text-center mb-16">
+                <span class="text-sm font-semibold text-secondary uppercase tracking-widest">FAQ</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
+                    Common Questions
+                </h2>
+            </div>
+
+            <div class="space-y-4" id="faqContainer">
+                <div class="reveal-section faq-item border border-dark/10 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left hover:bg-neutral/50 transition-colors">
+                        <span class="font-heading font-semibold text-primary pr-4">What makes Deem Creations different from other agencies?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-dark/40 flex-shrink-0 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                        <p class="px-6 pb-6 text-dark/60 leading-relaxed">We specialize exclusively in brand identity. That singular focus means every project receives deeper strategic thinking and higher-quality execution than a generalist agency can deliver. We build complete brand systems—not just logos—ensuring every element works together cohesively.</p>
+                    </div>
+                </div>
+                <div class="reveal-section faq-item border border-dark/10 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left hover:bg-neutral/50 transition-colors">
+                        <span class="font-heading font-semibold text-primary pr-4">How long does a typical brand identity project take?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-dark/40 flex-shrink-0 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                        <p class="px-6 pb-6 text-dark/60 leading-relaxed">A complete brand identity project typically takes 4–8 weeks, depending on scope and complexity. This includes discovery, research, strategy, design, refinement, and delivery of all brand assets and guidelines. We never rush the process because quality requires the right amount of time.</p>
+                    </div>
+                </div>
+                <div class="reveal-section faq-item border border-dark/10 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left hover:bg-neutral/50 transition-colors">
+                        <span class="font-heading font-semibold text-primary pr-4">What industries do you work with?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-dark/40 flex-shrink-0 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                        <p class="px-6 pb-6 text-dark/60 leading-relaxed">We primarily work with startups, restaurants, coffee shops, real estate companies, and growing businesses. Our process is adaptable to any industry, but these are the sectors where we've built the deepest expertise and deliver the most impactful results.</p>
+                    </div>
+                </div>
+                <div class="reveal-section faq-item border border-dark/10 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left hover:bg-neutral/50 transition-colors">
+                        <span class="font-heading font-semibold text-primary pr-4">What's included in a brand identity package?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-dark/40 flex-shrink-0 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                        <p class="px-6 pb-6 text-dark/60 leading-relaxed">Our brand identity packages include logo design (with variations), color palette, typography system, brand patterns and visual elements, business cards and stationery, social media templates, and a comprehensive brand guidelines document. Additional services like packaging and website UI can be included based on your needs.</p>
+                    </div>
+                </div>
+                <div class="reveal-section faq-item border border-dark/10 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left hover:bg-neutral/50 transition-colors">
+                        <span class="font-heading font-semibold text-primary pr-4">How do we get started?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-dark/40 flex-shrink-0 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                        <p class="px-6 pb-6 text-dark/60 leading-relaxed">Simply reach out through our contact form or email. We'll schedule a discovery call to understand your business, goals, and vision. From there, we'll propose a tailored scope and timeline. No obligation—just a genuine conversation about building your brand the right way.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-24 md:py-32 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(white 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl"></div>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div class="reveal-section">
+                    <span class="text-sm font-semibold text-secondary uppercase tracking-widest">Start a Project</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
+                        Ready to Build a Brand That Stands Out?
+                    </h2>
+                    <p class="mt-6 text-lg text-white/60 leading-relaxed">
+                        Tell us about your business and your vision. We'll show you how strategic brand identity can transform the way your customers see you.
+                    </p>
+                    <div class="mt-10 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-secondary"></i>
+                            </div>
+                            <div>
+                                <div class="text-white/40 text-sm">Email</div>
+                                <a href="mailto:creationsdeem@gmail.com" class="text-white font-medium hover:text-secondary transition-colors">creationsdeem@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-secondary"></i>
+                            </div>
+                            <div>
+                                <div class="text-white/40 text-sm">Phone</div>
+                                <a href="tel:03095973859" class="text-white font-medium hover:text-secondary transition-colors">0309-5973859</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-secondary"></i>
+                            </div>
+                            <div>
+                                <div class="text-white/40 text-sm">Location</div>
+                                <span class="text-white font-medium">Wah Cantt, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-section">
+                    <form id="contactForm" class="bg-white rounded-2xl p-8 md:p-10">
+                        <div class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-medium text-dark/70 mb-2">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 border border-dark/10 rounded-lg text-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-dark/70 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 border border-dark/10 rounded-lg text-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300" placeholder="you@company.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-dark/70 mb-2">Business Type</label>
+                                <select name="business" class="w-full px-4 py-3 border border-dark/10 rounded-lg text-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300 bg-white">
+                                    <option value="">Select your industry</option>
+                                    <option value="startup">Startup</option>
+                                    <option value="restaurant">Restaurant / Coffee Shop</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-dark/70 mb-2">Tell Us About Your Project</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 border border-dark/10 rounded-lg text-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300 resize-none" placeholder="What do you need? What's your timeline?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-4 bg-primary text-white font-heading font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 group">
+                                Send Message
+                                <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                            </button>
+                        </div>
+                        <div id="formMessage" class="mt-4 text-center text-sm font-medium hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-heading font-bold text-sm">DC</span>
+                        </div>
+                        <span class="font-heading font-semibold text-lg text-white">Deem Creations</span>
+                    </div>
+                    <p class="text-white/40 leading-relaxed max-w-md">
+                        Building Professional Brands. We help ambitious businesses create memorable visual identities that increase trust, recognition, and long-term growth.
+                    </p>
+                    <div class="flex items-center gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/deemcreations/" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <i class="fab fa-instagram text-white"> </i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/deem-creations-392580320/" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <i class="fab fa-linkedin-in text-white text-lg"></i>
+                        </a>
+                        <a href="https://x.com/" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <i class="fab fa-x-twitter text-white text-lg"></i>
+                        </a>
+                         <a href="https://www.behance.net/deemcreations" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <i class="fab fa-behance text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-white/40 hover:text-white transition-colors">Brand Identity Design</a></li>
+                        <li><a href="#services" class="text-white/40 hover:text-white transition-colors">Logo Design</a></li>
+                        <li><a href="#services" class="text-white/40 hover:text-white transition-colors">Brand Strategy</a></li>
+                        <li><a href="#services" class="text-white/40 hover:text-white transition-colors">Brand Guidelines</a></li>
+                        <li><a href="#services" class="text-white/40 hover:text-white transition-colors">Packaging Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-white/40 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#portfolio" class="text-white/40 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#process" class="text-white/40 hover:text-white transition-colors">Process</a></li>
+                        <li><a href="#contact" class="text-white/40 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-white/30 text-sm">&copy; 2024 Deem Creations. All rights reserved.</p>
+                <p class="text-white/30 text-sm">Building Professional Brands — Wah Cantt, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+
+
+
+
+</body>
+</html>
