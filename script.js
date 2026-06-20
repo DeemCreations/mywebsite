@@ -198,7 +198,7 @@ const caseStudies = {
         strategy: 'We positioned Friends as "Your Third Place"—a warm, inviting space between home and work where people feel they belong. The visual identity draws from this positioning with earthy tones, hand-crafted textures, and friendly typography.',
         identityDesign: 'The logo combines a custom wordmark with a subtle cup-and-steam motif that forms a heart shape—reinforcing the "friends" concept. The color palette centers on warm browns and cream tones with an accent amber that adds energy.',
         applications: [
-            { src: 'logo.png', label: 'Logo Design' },
+            { src: 'logo0.png', label: 'Logo Design' },
             { src: 'brand.png', label: 'Branding' },
             { src: 'instagrid.png', label: 'Grid System' },
             { src: 'shop.png', label: 'Interior Signage' }
