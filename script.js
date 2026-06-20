@@ -191,7 +191,7 @@ const caseStudies = {
         subtitle: 'Brand Identity & Packaging',
         year: '2026',
         industry: 'Restaurant & Coffee',
-        image: 'logodetail.png',
+        image: 'brand.png',
         overview: 'Friends Coffee Shop is a modern coffee brand created to deliver a warm, premium, and community-focused café experience. The objective was to develop a memorable visual identity that reflects quality coffee, meaningful connections, and a welcoming atmosphere. The branding system includes a custom logo inspired by coffee beans and natural elements, a refined color palette, typography guidelines, packaging design, social media assets, brand applications, and digital touchpoints. Every visual element was designed to create consistency across online and offline customer experiences.The final identity positions Friends Coffee Shop as a contemporary and trustworthy brand that stands out in a competitive coffee market while maintaining a friendly and approachable personality.',
         challenge: 'The local coffee market is saturated with both chains and independent shops. Friends needed a brand that could capture attention while conveying their unique personality: a place where people genuinely connect over great coffee.',
         research: 'We conducted extensive research into the local coffee culture, surveyed target customers, and analyzed competitor positioning. Our findings revealed that customers in this segment value authenticity, community feel, and visual warmth over modern minimalism.',
@@ -215,17 +215,17 @@ const caseStudies = {
         subtitle: 'Brand Identity & Strategy',
         year: '2023',
         industry: 'Health & Fitness Startup',
-        image: 'images/freshfuel/brandpage.png',
+        image: 'brandpage.png',
         overview: 'FreshFuel is a health-focused startup delivering nutritious meal prep to busy professionals. They needed a brand that could communicate energy, health, and convenience without feeling generic or clinical.',
         challenge: 'The meal prep and health food space is crowded with brands that either look too clinical (nutrition facts-heavy) or too casual (no professional credibility). FreshFuel needed to sit in the sweet spot: energetic but trustworthy.',
         research: 'We analyzed 40+ competitors, interviewed potential customers in the target demographic, and studied color psychology around appetite and trust. Our key insight: the target audience responds to bold simplicity—clean design with confident energy.',
         strategy: 'We positioned FreshFuel as the "Premium Fuel" choice—drawing an intentional parallel between fueling a high-performance vehicle and fueling your body. This metaphor drives the entire visual system.',
         identityDesign: 'The wordmark uses bold, geometric letterforms that convey strength and reliability. The accent mark (a speed line through the "F") adds dynamism. The color system pairs a deep navy with an energetic green and clean white.',
         applications: [
-            { src: 'images/freshfuel/brandguide.png', label: 'Brand Guide' },
-            { src: 'images/freshfuel/detail.png', label: 'Brand Collateral' },
-            { src: 'images/freshfuel/appui.png', label: 'App UI Design' },
-            { src: 'images/freshfuel/social.png', label: 'Social Templates' }
+            { src: 'brandguide.png', label: 'Brand Guide' },
+            { src: 'detail.png', label: 'Brand Collateral' },
+            { src: 'appui.png', label: 'App UI Design' },
+            { src: 'social.png', label: 'Social Templates' }
         ],
         results: [
             { number: '250%', label: 'Subscriber growth in 6 months' },
@@ -239,17 +239,17 @@ const caseStudies = {
         subtitle: 'Brand Identity & Guidelines',
         year: '2024',
         industry: 'Slilce Republic',
-        image: 'images/slicerepublic/modeboard.png',
+        image: 'modeboard.png',
         overview: 'Slice Republic is a modern pizza brand created to deliver bold flavors, premium ingredients, and a memorable dining experience. The goal was to develop a distinctive brand identity that would stand out in a competitive food market while appealing to a broad audience of pizza lovers.',
         challenge: 'The pizza industry is crowded with brands using similar visual styles, colors, and messaging. Slice Republic needed a unique identity that could communicate quality, energy, and trust while remaining highly recognizable across packaging, social media, and storefront applications.',
         research: 'Our research focused on successful restaurant and fast-casual food brands. We discovered that customers connect most with brands that combine great food, memorable visuals, and a strong personality. Consistency across every touchpoint was key to building recognition and customer loyalty.',
         strategy: 'We positioned Slice Republic around the concept of "Premium Pizza, Shared Moments." The brand was designed to feel welcoming, energetic, and modern, encouraging customers to associate every meal with quality and connection.',
         identityDesign: 'The visual identity combines modern typography, pizza-inspired elements, and a vibrant color palette to create a bold and memorable brand presence. Every design decision was made to communicate freshness, quality, and a passion for great food.',
         applications: [
-            { src: 'images/slicerepublic/brandguide.png', label: 'Delivery System' },
-            { src: 'images/slicerepublic/insta.png', label: 'Socials' },
-            { src: 'images/slicerepublic/devliverysystem.png', label: 'Brand Guide' },
-            { src: 'images/slicerepublic/grid.png', label: 'Instagrid' }
+            { src: 'brandguide.png', label: 'Delivery System' },
+            { src: 'insta.png', label: 'Socials' },
+            { src: 'devliverysystem.png', label: 'Brand Guide' },
+            { src: 'grid.png', label: 'Instagrid' }
         ],
         results: [
             { number: '65%', label: 'Faster property inquiries' },
@@ -263,17 +263,17 @@ const caseStudies = {
         subtitle: 'Brand Identity & Website UI',
         year: '2024',
         industry: 'Environmental Innovation',
-        image: 'images/idealzero/logo.png',
+        image: 'logo3.png',
         overview: 'IdealZero is a sustainability-focused brand dedicated to creating a cleaner, greener future. Through innovation, environmental responsibility, and conscious choices, the brand inspires individuals and organizations to reduce waste and move toward a more sustainable tomorrow.',
         challenge: 'In a market filled with generic environmental brands that rely on overused visual elements and messaging, IdealZero needed a distinctive identity that would communicate trust, innovation, and long-term commitment to sustainability while remaining modern and memorable.',
         research: 'Our research focused on sustainability, eco-conscious consumer behavior, and environmental branding trends. We discovered that audiences respond most positively to brands that combine environmental responsibility with practical innovation. People want brands that feel authentic, transparent, and action-oriented rather than purely promotional.',
         strategy: 'We positioned IdealZero around "Precision with Purpose"—the idea that their tools are meticulously crafted but always serve the human workflow. This dual nature of precision and empathy became the creative north star.',
         identityDesign: 'The visual identity combines a clean, approachable wordmark with a distinctive flowing underline that symbolizes progress, movement, and the journey toward a sustainable future. The rich green color palette reflects growth, nature, and environmental responsibility, while neutral gray tones provide balance and professionalism. Typography pairs the expressive Pacifico logo type with Open Sans, creating a balance between personality and clarity.',
         applications: [
-            { src: 'images/idealzero/branddetail.png', label: 'Branding' },
-            { src: 'images/idealzero/appui.png', label: 'App UI' },
-            { src: 'images/idealzero/website.png', label: 'Web UI' },
-            { src: 'images/idealzero/branddetail.png', label: 'Brand Kit' }
+            { src: 'branddetail1.png', label: 'Branding' },
+            { src: 'appui1.png', label: 'App UI' },
+            { src: 'website.png', label: 'Web UI' },
+            { src: 'branddetail.png', label: 'Brand Kit' }
         ],
         results: [
             { number: '180%', label: 'Website conversion increase' },
