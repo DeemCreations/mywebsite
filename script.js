@@ -222,10 +222,10 @@ const caseStudies = {
         strategy: 'We positioned FreshFuel as the "Premium Fuel" choice—drawing an intentional parallel between fueling a high-performance vehicle and fueling your body. This metaphor drives the entire visual system.',
         identityDesign: 'The wordmark uses bold, geometric letterforms that convey strength and reliability. The accent mark (a speed line through the "F") adds dynamism. The color system pairs a deep navy with an energetic green and clean white.',
         applications: [
-            { src: 'brandguide.png', label: 'Brand Guide' },
-            { src: 'detail.png', label: 'Brand Collateral' },
-            { src: 'appui.png', label: 'App UI Design' },
-            { src: 'social.png', label: 'Social Templates' }
+            { src: 'brandguide02.png', label: 'Brand Guide' },
+            { src: 'detail02.png', label: 'Brand Collateral' },
+            { src: 'appui02.png', label: 'App UI Design' },
+            { src: 'social02.png', label: 'Social Templates' }
         ],
         results: [
             { number: '250%', label: 'Subscriber growth in 6 months' },
@@ -246,10 +246,10 @@ const caseStudies = {
         strategy: 'We positioned Slice Republic around the concept of "Premium Pizza, Shared Moments." The brand was designed to feel welcoming, energetic, and modern, encouraging customers to associate every meal with quality and connection.',
         identityDesign: 'The visual identity combines modern typography, pizza-inspired elements, and a vibrant color palette to create a bold and memorable brand presence. Every design decision was made to communicate freshness, quality, and a passion for great food.',
         applications: [
-            { src: 'brandguide.png', label: 'Delivery System' },
-            { src: 'insta.png', label: 'Socials' },
-            { src: 'devliverysystem.png', label: 'Brand Guide' },
-            { src: 'grid.png', label: 'Instagrid' }
+            { src: 'brandguide01.png', label: 'Delivery System' },
+            { src: 'insta01.png', label: 'Socials' },
+            { src: 'devliverysystem01.png', label: 'Brand Guide' },
+            { src: 'grid01.png', label: 'Instagrid' }
         ],
         results: [
             { number: '65%', label: 'Faster property inquiries' },
